@@ -1,0 +1,27 @@
+meta {
+  name: crear
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/api/products/
+  body: json
+  auth: inherit
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "name": "prueba con bouncer 1", 
+    "price": 1000
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
